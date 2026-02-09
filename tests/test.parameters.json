@@ -32,14 +32,14 @@
     "enablePrivateEndpoint": {
       "value": false
     },
+    "vnetIntegration": {
+      "value": false
+    },
     "enableDiagnostics": {
-      "value": true
+      "value": false
     },
     "enableLock": {
-      "value": true
-    },
-    "lockLevel": {
-      "value": "CanNotDelete"
+      "value": false
     },
     "tags": {
       "value": {
