@@ -1,3 +1,3 @@
 module: appservices
 version: 1.0.0
-description: "Initial release - App Services with App Service Plan, Web App, Key Vault integration, diagnostics, RBAC, and resource locks"
+description: "Initial release"
