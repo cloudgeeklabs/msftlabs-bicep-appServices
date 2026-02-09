@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workloadName": {
+      "value": "ghtest"
+    },
+    "location": {
+      "value": "centralus"
+    },
+    "environment": {
+      "value": "dev"
+    },
+    "sku": {
+      "value": "B1"
+    },
+    "appKind": {
+      "value": "WebApp"
+    },
+    "runtimeStack": {
+      "value": "dotnet|v8.0"
+    },
+    "httpsOnly": {
+      "value": true
+    },
+    "enableSystemIdentity": {
+      "value": true
+    },
+    "vnetIntegration": {
+      "value": false
+    },
+    "enablePrivateEndpoint": {
+      "value": false
+    },
+    "enableDiagnostics": {
+      "value": true
+    },
+    "enableLock": {
+      "value": true
+    },
+    "lockLevel": {
+      "value": "CanNotDelete"
+    },
+    "tags": {
+      "value": {
+        "Environment": "Test",
+        "ManagedBy": "Pester",
+        "Purpose": "ModuleTesting"
+      }
+    }
+  }
+}

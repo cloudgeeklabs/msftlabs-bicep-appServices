@@ -1,0 +1,33 @@
+# PSRule configuration for Bicep module validation
+# https://azure.github.io/PSRule.Rules.Azure/
+
+binding:
+  targetType:
+    - bicep
+
+configuration:
+  AZURE_BICEP_FILE_EXPANSION: true
+  AZURE_PARAMETER_FILE_EXPANSION: true
+
+rule:
+  include:
+    - Azure.AppService.UseHTTPS
+    - Azure.AppService.MinTLS
+    - Azure.AppService.ManagedIdentity
+    - Azure.AppService.RemoteDebug
+    - Azure.RBAC.UseGroups
+    - Azure.Resource.UseTags
+
+  exclude:
+    - Azure.AppService.NETVersion
+    - Azure.AppService.PHPVersion
+
+output:
+  culture:
+    - en-US
+  format: Json
+  outcome: Fail
+
+suppression:
+  Azure.AppService.Name:
+    reason: Test App Service names may not follow production naming
